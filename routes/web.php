@@ -27,7 +27,6 @@ Route::get('/odeme',[App::class,'OdemeController']);
 Route::get('/siparis',[App::class,'SiparisController']);
 Route::view('/kategori','kategori');
 Route::get('/urun',[UrunController::class,'list'])->name('list');
-Route::get('/reyon',[ReyonController::class,'list'])->name('list');
 Route::view('/sepet','sepet');
 Route::view('/odeme','odeme');
 Route::view('/siparis','siparis');
@@ -38,6 +37,6 @@ Route::view('/kullanici/kaydol','kullanici/kaydol');
 Route::view('/reyon','reyon');
 
 Route::post('/create',[UrunController::class,'create'])->name('urunCreate');
-Route::post('/reyoncreate',[ReyonController::class,'create'])->name('reyonCreate');
+
 
 
