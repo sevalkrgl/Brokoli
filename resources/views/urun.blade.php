@@ -38,9 +38,20 @@
     <br>
         Adı:{{$urun->urun_adi}}
         Fiyatı:{{$urun->fiyati}}
+        Sepeti:{{$urun->getSepet->name}}
 
     @endforeach
-
+_____________________________________________________________________
+<br>
+sepetlerim:
+    @foreach($sepetler as $sepet)
+        <br>
+        {{$sepet->name}}
+        @foreach($sepet->getUrunler as $urunler)
+            {{$urunler->urun_adi}}
+            {{$urunler->fiyati}}
+        @endforeach
+    @endforeach
 
 </body>
 </html>

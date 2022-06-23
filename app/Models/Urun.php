@@ -9,4 +9,8 @@ class Urun extends Model
 {
     use HasFactory;
     protected $table = 'urun';
+
+    public function getSepet(){
+        return $this->hasOne(Sepet::class,'id','sepet_id');
+    }
 }
