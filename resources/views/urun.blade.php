@@ -9,37 +9,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <form method="POST" action="{{route('urunCreate')}}>
+<form method="POST" action="{{route('urunCreate')}}">
         @csrf
 
-        <div class="">
+    <div class="">
 
-            <label>Ürün adı</label>
-            <input name='name' type="text">
-        </div>
-        <div class="">
-            <label>Fiyatı</label>
-            <input name='price' type="numeric">
-        </div>
-        <div class="">
-            <label>Sepet</label>
-            <input name='sepet' type="numeric">
-        </div>
-     <button type="submit">Kaydet</button>
+<label>Ürün adı</label>
+<input name='name' type="text">
+</div>
+<div class="">
+    <label>Fiyatı</label>
+    <input name='price' type="numeric">
+</div>
+<div class="">
+    <label>Sepet</label>
+    <input name='sepet' type="numeric">
+</div>
+<button type="submit">Kaydet</button>
 
-    </form>
+</form>
 
 
     ---------------------------------------------------------------------------------------------------
-    
+
     @foreach ($urunler as $urun)
     <br>
         Adı:{{$urun->urun_adi}}
         Fiyatı:{{$urun->fiyati}}
 
     @endforeach
-   
+
 
 </body>
 </html>
