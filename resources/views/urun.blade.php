@@ -25,7 +25,11 @@
 </div>
 <div class="">
     <label>Sepet</label>
-    <input name='sepet' type="numeric">
+    <select name="sepet" id="sepet">
+        @foreach($sepetler as $sepet)
+        <option value="{{$sepet->id}}">{{$sepet->name}}</option>
+        @endforeach
+    </select>
 </div>
 <button type="submit">Kaydet</button>
 
